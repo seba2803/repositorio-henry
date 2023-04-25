@@ -25,5 +25,20 @@ function countdown(n){
     return arrN;
   }
 }
-
 console.log(countdown(6));
+
+//funcion que llena un array que en la primera posicion tenga el valor de 'startNum' y en la ultima posicion tenga el valor 'endNum'
+function rangeOfNumbers(startNum, endNum) {
+  if(endNum < startNum){
+  return [];
+  } else if(endNum === startNum){
+    let myarr = rangeOfNumbers(startNum, endNum - 1);
+    myarr.push(endNum);
+    return myarr;
+  } else{
+    let myarr = rangeOfNumbers(startNum, endNum - 1);
+    myarr.push(endNum);
+    return myarr;
+  }
+};
+console.log(rangeOfNumbers(0, 4));
