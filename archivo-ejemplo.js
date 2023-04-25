@@ -14,3 +14,16 @@ console.log(convertToInteger("1011")); // los numeros binarios se resulven asi: 
 // 1 * 8 + 1 * 2 + 1 * 1
 // 8 + 2 + 1
 // es igual a 11
+
+//funcion recursiva que itera los n valores y los guarda en un array
+function countdown(n){
+  if(n < 1){
+  return [];
+  } else {
+    let arrN = countdown(n - 1);
+    arrN.push(n);
+    return arrN;
+  }
+}
+
+console.log(countdown(6));
