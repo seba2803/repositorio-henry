@@ -50,3 +50,12 @@ function diffArray(arr1, arr2) {
 }
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
 
+function destroyer(arr) {
+    //Object.values(arguments).splice(1) guarda los argumentos retantes desde la posicion 1 hasta el final en la variable otherArguments
+    let otherArguments = Object.values(arguments).splice(1);
+
+    return arr.filter(value => !otherArguments.includes(value)); //filtra los elementos que no estan en otherArguments
+  }
+  
+  console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
