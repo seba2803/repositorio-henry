@@ -83,3 +83,11 @@ console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
   { first: "Mercutio", last: null }, 
   { first: "Tybalt", last: "Capulet" }], { first: "Tybalt",last: "Capulet" }));
 
+//funcion que agrega '-' entre palabras ej: hola soy: hola-soy
+  function spinalCase(str) {
+    return str
+      .split(/\s|_|(?=[A-Z])/)
+      .join("-").toLowerCase()
+  }
+  console.log(spinalCase('thisIsSpinalTap'));
+
