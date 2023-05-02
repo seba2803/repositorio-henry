@@ -42,3 +42,11 @@ function rangeOfNumbers(startNum, endNum) {
   }
 };
 console.log(rangeOfNumbers(0, 4));
+
+function diffArray(arr1, arr2) {
+  const newArr = arr1.concat(arr2)
+  .filter(value => !arr1.includes(value) || !arr2.includes(value));
+  return 'el/los numeros que no comparten entre ' + arr1 + ' y '+ arr2 + ' es: ' + newArr;
+}
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+
