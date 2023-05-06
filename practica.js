@@ -4,4 +4,3 @@ function deleteElements(arr){
   }
   console.log(deleteElements([1,1,2,2,3,4,5,5]));
 
-  let obj = {a: 'hola', b: 'Alla'};

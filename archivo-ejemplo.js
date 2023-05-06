@@ -91,9 +91,25 @@ console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
   }
   console.log(spinalCase('thisIsSpinalTap'));
 
-
+//funcion que elimina elementos repetidos de un array
   function deleteElements(arr){
   let newlista = new Set(arr);//el objeto Set no acepta elementos repetidos
   return [...newlista];
 }
-console.log(deleteElements([1,1,2,2,3,4,5,5]));
+console.log(deleteElements([1,2,1,3,2,4,5,5]));
+
+//funcion que retorna la letra faltante de una frase dada y si no falta una letra devuelve undefined
+//ej: 'abce' devuelve 'd'
+function fearNotLetter(str) {
+  let compare = 'abcdefghijklmnopqrstuvwxyz'
+  for(let i = 0; i < str.length; i++){
+    if(str[i+1] == compare[compare.search(str[i])+1] && i+1 < str.length){
+      continue;
+    } else if(str[i+1] !== compare[compare.search(str[i])+1] && i+1 < str.length){
+      return compare[compare.search(str[i])+1];
+    } else{
+      return undefined;
+    }
+  }
+}
+console.log(fearNotLetter("abce"));
